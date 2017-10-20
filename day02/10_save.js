@@ -1,0 +1,1 @@
+//商品集合: 演示集合的save函数即可保存现有文档，又可添加没有的文档//但,save函数有竞态问题，请用upsert方式代替。printjson(db.products.find().toArray());var p=db.products.findOne({pname:"iphone7"});//sleep(5000);p.count+=10;db.products.save(p);var newP={pname:"iphoneX",count:20,createdDate:new Date()};db.products.save(newP);printjson(db.products.find().toArray());
